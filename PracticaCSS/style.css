@@ -1,0 +1,251 @@
+:root{
+/* Declaracion de nombres a cada color de la paleta de colores a utilizar
+No resulta recomendable si tu diseño tiende a cambiar pero es funcional */
+--azulOscuro: #042940;
+--verdeOscuro: #005C53;
+--verdeLinksIntenso: #08a595;
+--verdeLinks: #07bd86;
+--verde: #9FC131;
+--verdeLimon: #DBF227;
+--verdePistache: #D6D58E;
+--verdePistacheIntenso : #eeec6e;
+--negro: #000000;
+--blanco: #FFFFFF;
+
+/* Establecer configuraciones tipográficas globales al proyecto */
+--font-size: 1.3rem;
+--roboto:'Roboto', sans-serif;
+--verdana:'Verdana', sans-serif;
+}
+/* Esta sección de código CSS establece el modelo de caja border-box para el elemento html
+ y todos sus elementos hijos, asegurando que el tamaño total de los elementos incluya el contenido, padding y borde. */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+
+/* Poner padding y margin en 0 permite quitar los bordes que pone por defecto el navegador
+en nuestro elemento body, de esta manera somos libres de decidir como se muestra todo */
+body{
+    padding: 0;
+    margin: 0;
+    background-color: var(--azulOscuro);
+    color: var(--blanco);
+}
+
+/* Quitamos el margen que poseen las etiquetas h1 a h3 */
+h1, h2, h3 {
+    margin: 0;
+}
+
+/* Establecemos un color a los links que se puedan presentar en texto mediante la etiqueta a */
+a{
+    color: var(--verdeLinks);
+}
+
+/* Los :hover nos permite agregar cambios una vez que se pone el cursor encima del elemento,
+en este caso el color de los links de etiqueta html cambia cuando se pone el cursos sobre ellos */
+a:hover {
+    color: var(--verdeLinksIntenso)
+}
+
+/* Lo que se ah hecho anteriormente es que es recomendable empezar con un formato general a usar
+y posteriormente según necesitemos generar excepciones de ello */
+
+/* Estilo barra de navegación  */
+#navegacion{
+    font-family: var(--verdana);
+    font-size: 80%;
+    padding: 1rem;
+}
+
+#navegacion ul{
+    /* Quitarle a la lista de la barra de navegacion los puntos que enumeran cada atributo */
+    list-style-type:none;
+    padding: 0;
+    margin: 0;
+    /* despliegue de los elementos de manera horizontal, justificados mediante un flexbox */
+    display: flex;
+    flex-flow:row wrap;
+    /* alineación  horizontal*/
+    justify-content: center;
+    /* alineación vertical */
+    align-items: center;
+    /* La instrucción gap nos permite seleccionar el espacio entre los componentes */
+    gap: 2rem;
+}
+
+/* IMPORTANTE */
+#navegacion li:first-child{
+    /* La propiedad flex basis nos permite seleccionar cuanto del espacio disponible en nuestro flex en este caso
+    el flex inline va a ocupar este elemento, en este caso ocuparía el 100% por lo que nuestros elementos siguientes
+    deberán moverse a otra linea */
+    flex-basis: 100%;
+    text-align: center;
+}
+
+/* Esto nos permite seleccionar todos los elementos que su clase comience con fa-, esto nos permite seleccionar todos
+los iconos que usemos de font awesome puesto que empiezan con fa-i */
+#navegacion[class*="fa-"]{
+    font-size: 150%;
+    color: var(--verde);   
+}
+
+#navegacion h1[class*="fa-"]{
+    font-size: 100%;
+    color: var(--verde);
+}
+
+#navegacion i{
+    font-size: 150%;
+}
+
+#navegacion a{
+    color: var(--verdeLimon);
+    text-decoration: none;
+    display: block;
+}
+
+#navegacion a:hover,
+#navegacion[class*="fa-"]:hover{
+ color: var(--verdeLinksIntenso);
+}
+
+/* Creación de link con formato de boton */
+#navegacion .boton{
+    background-color: var(--verdePistache);
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+    color: var(--azulOscuro)
+}
+
+#navegacion .boton:hover{
+    background-color: var(--verdePistacheIntenso);
+    color:var(--negro);
+}
+
+
+/* Estilos del hero(texto principal que se muestra) para referir a una etiqueta con id utilizamos el #*/
+
+#hero{
+    padding-bottom: 10rem;
+}
+
+#hero p{
+    font-size: 1rem;
+    /*No poner una unidad especifica de medida nos permite que sea proporcional si el texto cambia*/
+    line-height: 1.5;
+}
+
+/*Modificamos el párrafo con la clase nombre que establecimos en el html para poder hacer cambios en este
+de manera especifica sin afectar el demás texto, indicamos que modificaremos una clase mediante un .NombreClase */
+#hero .nombre{
+    font-family: var(--verdana);
+}
+
+#hero h3{
+    font-size:4rem;
+    font-weight: normal;
+}
+
+/* Estilo sección contacto */
+
+#contacto {
+    background-color:var(--verde);
+    text-align: center;
+    font-family: var(--roboto);
+    /* establecemos su tamaño para que el texto se acomode a una medida establecida */
+    width: 400px;
+    padding: 2rem,0;
+}
+
+#contacto h4{
+    font-size: 2rem;
+}
+
+#contacto p{
+    font-size: 1.2rem;
+}
+
+/* Toma el ultimo elemento que contenga esa etiqueta con last-child y establecemos su estilo */
+#contacto p:last-child{
+    margin-top: 3rem;
+}
+
+/* Inicio código del pie de pagina ---------------------------------------- */
+#pie{
+    font-family: var(--roboto);
+    font-size: 90%;
+    padding: 1rem;
+    width: 400px;
+}
+
+#pie ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#pie li:first-child{
+    font-size: 150%;
+    flex-basis: 100%;
+    text-align: center;
+}
+
+#pie li:last-child{
+    font-size: 80%;
+    text-align: center;
+    flex-basis: 100%;
+}
+#pie [class*="fa-"]{
+    font-size: 200%;
+}
+
+
+
+/* Tomamos específicamente la sección del párrafo con la clase nombre que esta dentro de un span, es decir el nombre
+David Guido y modificamos su tamaño y estilo de letra sin cambiar su posición. */
+.nombre span{
+    font-family: var(--roboto);
+    font-size: 4rem;
+    color:var(--verde);
+    /* Con el display seleccionamos como actuara el despliegue de nuestro objeto, anteriormente se mostraba en la misma linea
+    que el contenido anterior pero ahora de despliega como un bloque de cosas es decir cada cosa se mostrara en una linea diferente */
+    display:block;
+}
+
+/* Para establecer un medio responsivo en nuestra barra de navegacion y la pagina en general usaremos la sección correspondiente
+a @media */
+
+/* Establecemos que el tamaño mínimo de la pagina sea de 850px */
+@media(min-width:850px){
+
+    #navegacion {
+        /* Aqui establecemos que el máximo de la barra de navegacion es 1200px y el margen se vuelve automático */
+        max-width: 1200px;
+        margin: auto;
+    }
+
+
+    #navegacion li:first-child{
+        /* Esto nos permite que el elemento li primero que es el nombre a partir de 1200px no se muestre en la parte
+        superior sino que se aliñé con los demás elementos con el flex-basis auto, asi mismo mediante el text align
+        lo enviamos a la izquierda y para los demás elementos de deja un margen automático hacia la derecha */
+        flex-basis: auto;
+        text-align: left;
+        margin-right:auto;
+    }
+
+}
+
+

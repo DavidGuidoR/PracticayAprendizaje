@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Este script nos permite vincular nuestro kit de font awesome para poder hacer referencia mediante el id y usar los iconos -->
+    <script src="https://kit.fontawesome.com/f128dca28b.js" crossorigin="anonymous"></script>
+    <title>PaginaWebPrueba</title>
+</head>
+<body>
+    <!-- Sección de código para el panel de navegacion---------------------------------------------------------------------------------- -->
+    <section id="navegacion">
+        <ul>
+            <li>
+                <h1>
+                    <a href="index.html">
+                        <span class="fa-solid fa-gamepad" aria-hidden="true"></span>
+                        <span>David Guido</span>
+                    </a>
+                </h1>
+            </li>
+            </li>
+            <li>
+                <a href="projectos.html">
+                    Proyectos
+                </a></li>
+            <li>
+                <a href="acercade.html">Acerca de mi</a>
+            </li>
+            <li>
+                <a href="#contacto">Contacto</a>
+            </li>
+            <li>
+                <a href="linkedin" target="_blank">
+                <!-- Referencia al logo de linkedIn en font awesome 
+                La parte de aria hidden nos permite que el icono sea accesible mediante lectura de pantalla
+                EL sr-only nos permite ocultar el texto y que solo se muestre el icono-->
+                    <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                    <span class="sr-only">LinkedIn</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/DavidGuidoR" target="_blank">
+                    <i class="fa-brands fa-square-github" arial-hidden="true"></i>
+                    <span class="sr-only">Github</span>
+                </a>
+            </li>
+            <li>
+                <a href="curriculum" target="_blank" class="boton">Curriculum</a>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Sección de código para el hero---------------------------------------------------------------------------------- -->
+    
+    <section id="hero">
+    <!-- Agregamos una clase para poder manipular el CSS -->
+        <p class="nombre">
+            Hola, ni nombre es 
+            <span>
+                David Guido.
+            </span>
+        </p>
+
+    <h3>
+        Estudiante de ingeniería en sistemas
+    </h3> 
+        <p>
+            Cuento conocimientos básicos de desarrollo web,experiencia en planeación y creación de redes, manejo y desarrollo de proyectos con metodologías clásicas,
+            desarrollo de aplicaciones de escritorio con java.
+        </p>
+
+        <p>
+            Actualmente me encuentro cursando el 6to semestre de la carrera y ocupándome en el desarrollo de proyectos personales. Asi mismo considero que poseo las habilidades blandas necesarias para cualquier empleo como lo son: comunicacion efectiva, trabajo en equipo,
+            trabajo bajo presión, cumplimiento y definición de periodos de entrega asi como una claridad para hablar en publico y exponer mis ideas.
+        </p>
+    </section>
+
+    <!-- Sección de código para el contacto---------------------------------------------------------------------------------- -->
+
+    <section id="contacto">
+        <h4>Contacto</h4>
+        <p>Para ofertas de colaboración de proyectos u ofertas de trabajo por favor contactarse por correo, estaré encantado de atenderlo.</p>
+        <!-- La instrucción mailto: permite establecer nuestro correo electrónico y que redirige a una aplicación para enviarle correo -->
+        <p>
+            <a href="mailto: GuidoD890@gmail.com">Correo</a>
+        </p>
+    </section>
+
+    <!-- Sección de código para el pie de pagina---------------------------------------------------------------------------------- -->
+    <section id="pie">
+        <ul>
+            <li>
+                David Guido-Estudiante
+            </li>
+            <li>
+                <a>
+                    <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                    <span class="sr-only">LinkedIn</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/DavidGuidoR" target="_blank">
+                    <i class="fa-brands fa-square-github" arial-hidden="true"></i>
+                    <span class="sr-only">Github</span>
+                </a>
+            </li>
+            <li>
+                <a href="mailto: GuidoD890@gmail.com">
+                    <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                    <span class="sr-only">Contacto</span>
+                </a>
+            </li>
+            <li>
+                <span>@2023 David Guido. Todos los derechos reservados.</span>
+            </li>
+        </ul>
+
+    </section>
+</body>
+</html>
