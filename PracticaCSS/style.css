@@ -133,7 +133,9 @@ los iconos que usemos de font awesome puesto que empiezan con fa-i */
 /* Estilos del hero(texto principal que se muestra) para referir a una etiqueta con id utilizamos el #*/
 
 #hero{
-    padding-bottom: 10rem;
+    padding: 4rem 1rem 10rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 #hero p{
@@ -153,15 +155,26 @@ de manera especifica sin afectar el demás texto, indicamos que modificaremos un
     font-weight: normal;
 }
 
-/* Estilo sección contacto */
-
-#contacto {
+/* Divs de separación */
+.seccionContacto{
     background-color:var(--verde);
+}
+
+.separadores{
+    background: linear-gradient(90deg, rgba(9,255,231,1) 0%, rgba(255,255,255,1) 100%);
+    height: 2px;
+}
+
+/* Estilo sección contacto */
+#contacto {
     text-align: center;
     font-family: var(--roboto);
     /* establecemos su tamaño para que el texto se acomode a una medida establecida */
     width: 400px;
-    padding: 2rem,0;
+    padding: 3rem 0;
+    /* IMPORTANTE */
+    /* La instrucción del margen en 0 y establecer como auto el margen de los lados nos permite que el contenido se centre en la pantalla dentro de la caja. */
+    margin: 0 auto;
 }
 
 #contacto h4{
@@ -177,11 +190,24 @@ de manera especifica sin afectar el demás texto, indicamos que modificaremos un
     margin-top: 3rem;
 }
 
+#contacto .boton{
+    background-color: var(--verdePistache);
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+    color: var(--azulOscuro);
+    text-decoration: none;
+}
+
+#contacto .boton:hover{
+    background-color: var(--verdePistacheIntenso);
+    color:var(--negro);
+}
 /* Inicio código del pie de pagina ---------------------------------------- */
 #pie{
     font-family: var(--roboto);
     font-size: 90%;
     padding: 1rem;
+    margin: 0 auto;
     width: 400px;
 }
 
