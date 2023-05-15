@@ -2,12 +2,12 @@
 /* Declaracion de nombres a cada color de la paleta de colores a utilizar
 No resulta recomendable si tu diseño tiende a cambiar pero es funcional */
 --azulOscuro: #042940;
---verdeOscuro: #005C53;
+--verdeOscuro: #003a34;
 --verdeLinksIntenso: #08a595;
 --verdeLinks: #07bd86;
 --verde: #9FC131;
 --verdeLimon: #DBF227;
---verdePistache: #D6D58E;
+--verdePistache: #636100;
 --verdePistacheIntenso : #eeec6e;
 --negro: #000000;
 --blanco: #FFFFFF;
@@ -52,6 +52,10 @@ a{
 en este caso el color de los links de etiqueta html cambia cuando se pone el cursos sobre ellos */
 a:hover {
     color: var(--verdeLinksIntenso)
+}
+
+img{
+    width: 100%;
 }
 
 /* Lo que se ah hecho anteriormente es que es recomendable empezar con un formato general a usar
@@ -202,6 +206,116 @@ de manera especifica sin afectar el demás texto, indicamos que modificaremos un
     background-color: var(--verdePistacheIntenso);
     color:var(--negro);
 }
+
+/* Inicio código de la sección de proyectos ---------------------------------------- */
+.seccionProyectos{
+    background-color: var(--azulOscuro);
+}
+
+#proyectos{
+    max-width: 1200px;
+    padding: 4rem 1rem 10rem 1rem;
+    margin: 0 auto;
+    font-family: var(--roboto);
+}
+
+#proyectos h3{
+    font-size: 2rem;
+    color: var(--blanco);
+}
+
+#proyectos h4{
+    font-size: 1.5rem;
+    color: var(blanco);
+    margin-bottom: 0;
+}
+
+#proyectos h5{
+    font-size: 1.5rem;
+    color: var(--verde);
+    margin: 0;
+    padding: 0;
+}
+
+#proyectos ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+    font-size: 1rem;
+}
+
+#proyectos p{
+    background-color: var(--verdeOscuro);
+    border-radius: 15px;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+#proyectos span{
+    font-size: 1.2rem;
+}
+
+#proyectos img {
+    margin: 2rem 0 4rem 0;
+    border-top: 1px solid var(--blanco);
+    border-left: 1px solid var(--blanco);
+    border-radius: 15px;
+    padding: 1rem;
+}
+
+/*Seccion responsiva de la parte de proyectos para usar una distribución grid y dividir en 2 columnas el contenido  */
+@media(min-width:550px){
+    article{
+        display: grid;
+        grid-template-columns: repeat(10 1fr);
+        gap:1rem;
+    }
+
+
+    #proyectos .img{
+        grid-column: 1/6;
+        grid-row: 1/2;
+    }
+    
+    .textoProyecto{
+        grid-column: 5/11;
+        grid-row: 1/2;
+        order: 2;
+        text-align: right;
+    }
+
+    
+    #proyectos ul{
+        justify-content: flex-end;
+    }
+
+    .textoProyecto2{
+        grid-column: 1/6;
+        grid-row: 1/2;
+        text-align: left;
+        order: 2;
+    }
+
+    #proyectos .img2{
+        grid-column: 5/11;
+        grid-row: 1/2;
+    }
+
+    #proyectos .img3{
+        grid-column: 1/6;
+        grid-row: 1/2;
+        width: 600px;
+        height: 300px;
+    }
+
+    #proyectos .textoProyecto2 ul{
+        justify-content: flex-start;
+    }
+}
+
 /* Inicio código del pie de pagina ---------------------------------------- */
 #pie{
     font-family: var(--roboto);
@@ -274,4 +388,93 @@ a @media */
 
 }
 
+    /* Seccion de código acerca de mi -----------------------------------------------------------------------------------*/
+
+    .seccionContenido{
+        background-color: var(--verdeOscuro);
+    }
+
+    #contenido{
+        max-width: 1200px;
+        padding: 4rem 1rem 10rem 1rem;
+        margin: 0 auto;
+        font-family: var(--roboto);
+    }
+    
+    
+    #contenido h3{
+        font-size: 2rem;
+        color: var(--verde);
+        margin-bottom: 2rem;
+    }
+
+    #contenido h4{
+        font-size: 1rem;
+        color: var(--verdeLimon);
+    }
+    
+    #contenido ul{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-flow: row wrap;
+        gap: 1rem;
+        font-size: 1rem;
+    }
+    
+    #contenido p{
+        background-color: var(--verdePistache);
+        border-radius: 15px;
+        padding: 1rem;
+        font-size: 1rem;
+    }
+    
+    #contenido span{
+        font-size: 1.2rem;
+    }
+    
+    #contenido img {
+        margin: 2rem 0 4rem 0;
+        border-top: 1px solid var(--blanco);
+        border-left: 1px solid var(--blanco);
+        border-radius: 15px;
+        padding: 1rem;
+        width: 400px;
+    }
+    
+    #contenido{
+        width: 1200px;
+        padding: 4rem 1rem 10rem 1rem;
+        margin: 0 auto;
+    }
+
+
+
+    @media(min-width:550px){
+        article{
+            display: grid;
+            grid-template-columns: repeat(10 1fr);
+            gap:1rem;
+        }
+    
+    
+        #contenido .img{
+            grid-column: 1/6;
+            grid-row: 1/2;
+        }
+        
+        .textoProyecto{
+            grid-column: 5/11;
+            grid-row: 1/2;
+            order: 2;
+            text-align: right;
+        }
+    
+        
+        #contenido ul{
+            justify-content: flex-end;
+        }
+    }
+    
 
